@@ -120,7 +120,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/authors/name/Андерсон",
+					"raw": "http://localhost:8080/authors/name/Булгаков М.А.",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -129,7 +129,7 @@
 					"path": [
 						"authors",
 						"name",
-						"Андерсон"
+						"Булгаков М.А."
 					]
 				}
 			},
@@ -142,7 +142,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"title\": \"Очередная Книга\",\r\n    \"name_author\": \"очередной автор\",\r\n    \"name_genre\": \"жанр\",\r\n    \"price\": 600.50,\r\n    \"amount\": 11\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -150,36 +150,40 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/book/New?title=Sky&name_genre=Сказка&name_author=Андерсон&price=555&amount=5",
+					"raw": "http://localhost:8080/book",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"book",
-						"New"
+						"book"
 					],
 					"query": [
 						{
 							"key": "title",
-							"value": "Sky"
+							"value": "Супер Новая Книга",
+							"disabled": true
 						},
 						{
-							"key": "name_genre",
-							"value": "Сказка"
+							"key": "author",
+							"value": "Супер Новый Автор",
+							"disabled": true
 						},
 						{
-							"key": "name_author",
-							"value": "Андерсон"
+							"key": "genre",
+							"value": "Супер Новый жанр",
+							"disabled": true
 						},
 						{
 							"key": "price",
-							"value": "555"
+							"value": "555.57",
+							"disabled": true
 						},
 						{
 							"key": "amount",
-							"value": "5"
+							"value": "10",
+							"disabled": true
 						}
 					]
 				}
@@ -239,15 +243,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/books/1",
+					"raw": "http://localhost:8080/book/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"books",
-						"1"
+						"book",
+						"4"
 					]
 				}
 			},
@@ -265,7 +269,19 @@
 			"name": "FetchBooksByAuthorNameWithPrice",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/Достоевский Ф.М.",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"Достоевский Ф.М."
+					]
+				}
 			},
 			"response": []
 		}
